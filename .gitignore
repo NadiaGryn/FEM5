@@ -1,0 +1,8 @@
+#ignore
+readme.md
+stitches.txt
+stylesheet.txt
+.psd
+node_modules
+package-lock.json
+.vscode/
