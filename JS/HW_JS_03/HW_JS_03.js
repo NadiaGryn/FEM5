@@ -13,7 +13,7 @@ while (Number.isNaN(+number2) || number2 === null || number2 === '') {
 }
 
 let mathOperator = prompt(`Enter please "+" or "-" or "*" or "/"`);
-while (mathOperator !=='+' && mathOperator !=='-' && mathOperator !=='/' && mathOperator !=='*'){
+while (mathOperator !== '+' && mathOperator !== '-' && mathOperator !== '/' && mathOperator !== '*') {
   mathOperator = prompt(`Enter correctly, please "+" or "-" or "*" or "/"`);
 }
 
@@ -30,8 +30,9 @@ let mathResult = (num1, num2, operator) => {
       return number1 * number2;
 
     case '/':
-    return number1 / number2;
+      return number1 / number2;
   }
 }
 
-console.log(`Your result is ${mathResult()}`);
+const result = mathResult(number1, number2, operator);
+console.log(result);

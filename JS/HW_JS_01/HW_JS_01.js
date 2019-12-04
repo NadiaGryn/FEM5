@@ -54,3 +54,45 @@ else {
 
 
 
+let userName = prompt("What is your name?");
+for (let i = 1; i <= 3; i++) {
+    if (!userName) {
+        userName = prompt("Something went wrong. Try again!");
+    }
+}
+
+
+// let userName = prompt("What is your name?");
+//         for (let i = 1; i <= 3; i++) {
+//             if (!userName) {
+//                 userName = prompt("Something went wrong. Try again!");
+//             }
+//         }
+
+
+//         let userAge = +prompt("How old are you?");
+
+//         for (let i = 1; i <= 3; i++) {
+//             if (!userAge) {
+//                 userAge = +prompt("Something went wrong. Try again!");
+//             }
+
+//             if (userAge < 18) {
+
+//                 alert("You are not allowed to visit this website.");
+//             } else if (userAge >= 18 && userAge <= 22) {
+
+//                 const result = confirm("Are you sure you want to continue?");
+
+//                 if (result) {
+
+//                     alert(`Welcome ${userName}!`);
+//                 } else
+//                     alert("You are not allowed to visit this website.");
+//             } else if (userAge > 22) {
+
+//                 alert(`Welcome ${userName}!`);
+//             }
+//         }
+
+
