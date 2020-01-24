@@ -1,0 +1,124 @@
+.bgrnd1 {
+    background-image: url('../img/320px/Pizza\ delivery\ fon_320px.png');
+    background-position: bottom;
+}
+
+.bgrnd2 {
+    background-image: url('../img/320px/UA_UX\ Salads\ fon\ 320_px.png');
+    background-position: bottom;
+}
+
+.bgrnd3 {
+    background-image: url('../img/320px/Desserts\ fon_320px.png');
+    background-position: center;
+}
+
+.center-navigation__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.center-navigation__bgrnd {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 2px;
+    width: 100%;
+    text-align: center;
+}
+.center-navigation__text {
+    color: $text-color;
+    font-size: 20px;
+    margin-top: 28px;
+    margin-left: 7px;
+}
+
+.arrow-nav {
+    background-color: $olive-color;
+    padding: 30px 25px;
+    margin-bottom: 2px;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+@media (min-width: 640px) {
+
+    .arrow-nav {
+        padding: 70px;
+    }
+
+    .fa-angle-right:before {
+        font-size: 20px;
+    }
+
+    .bgrnd1 {
+        background-image: url('../img/640px/Pizza\ delivery_640px.png');
+    }
+
+    .bgrnd2 {
+        background-image: url('../img/640px/UA_UX\ Salads\ fon_640px.png');
+    }
+
+    .bgrnd3 {
+        background-image: url('../img/640px/Desserts\ fon_640px.png');
+    }
+
+    .center-navigation__text {
+        color: $text-color;
+        font-size: 30px;
+        margin-top: 54px;
+    }
+}
+
+@media (min-width: 980px) {
+    
+    .center-navigation {
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .center-navigation__item {
+            width: 33.5%;
+        }
+
+        .center-navigation__bgrnd {
+            margin: 3px 0 40px 0;
+            padding: 168px 0px;
+            background-position-y: center;
+        }
+
+        .center-navigation__text {
+            font-size: 30px;
+            margin-top: -71px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .center-navigation {
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .center-navigation__item {
+            width: 33.5%;
+        }
+
+        .center-navigation__bgrnd {
+            margin: 3px 0 40px 0;
+            padding: 168px 0px;
+            background-position-y: center;
+        }
+
+        .center-navigation__text {
+            font-size: 30px;
+            margin-top: -71px;
+        }
+    }
+}

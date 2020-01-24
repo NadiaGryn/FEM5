@@ -1,0 +1,330 @@
+.menu__heading {
+    color: $menu-text-color;
+    font-size: 19px;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-left: 7px;
+    word-spacing: 2px;
+}
+
+.menu__text {
+    color: #cbccce;
+    font-size: 10px;
+    margin: 5px 0;
+    margin-left: 9px;
+}
+
+.menu__flex-item {
+    margin-bottom: 27px;
+}
+
+.menu-section {
+    padding: 9px 9px 8px 18px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 10px
+}
+
+.menu-section--dark {
+    color: $olive-color;
+    background-color: #3f4043;
+}
+
+.menu-section--light {
+    color: white;
+    background-color: $olive-color;
+    margin-bottom: 3px;
+    
+}
+
+.dish-list {
+    padding: 10px;
+    color: $menu-text-color;
+    margin-bottom: 1px;
+}
+
+.dish-list__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dish-list__title {
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+.dish-list__dish-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dish-list__dish-name { 
+    margin-left: 5px;
+}
+
+.dish-list__dish-name::before {
+    content: '\00B7';
+    margin-right: 4px;
+}
+
+.dish-list__dish-price{
+    margin-right: -10px;
+}
+
+.dish-list__dish-describtion {
+    font-size: 9px;
+    text-align: justify;
+    margin-left: 8px;
+    margin-bottom: -4px;
+}
+
+.dish-list__ico.pizza::before {
+    content: url('/app/img/320px/1pizza.png');
+    margin-right: -10px;
+}
+
+.dish-list__ico.drinks::before {
+    content: url('/app/img/320px/2drinks.png');
+    margin-right: -5px;
+}
+
+.dish-list__ico.tea::before {
+    content: url('/app/img/320px/3tea.png');
+    margin-right: -10px;
+}
+
+.dish-list__ico.beer::before {
+    content: url('/app/img/320px/4beer.png');
+    margin-right: -5px;
+}
+
+@media (min-width: 640px) {
+
+    .menu__heading {
+        font-size: 35px;
+        font-weight: normal;
+        margin-left: 19px;
+    }
+
+    .menu__text {
+        font-size: 17px;
+        margin: 10px 0 10px 20px;
+    }
+
+    .menu-section {
+        padding: 15px 25px;
+        font-size: 35px;
+    }
+
+    .dish-list__heading {
+        font-size: 25px;
+        padding: 15px 10px;
+    }
+
+    .dish-list__title {
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+
+    .dish-list__ico.pizza::before {
+        content: url('../img/640px/1pizza_640.png');
+        margin-right: -20px;
+    }
+
+    .dish-list__ico.drinks::before {
+        content: url('../img/640px/2drinks_640.png');
+
+    }
+
+    .dish-list__ico.tea::before {
+        content: url('../img/640px/3tea_640.png');
+        margin-right: -20px;
+    }
+
+    .dish-list__ico.beer::before {
+        content: url('../img/640px/4beer_640.png');
+        margin-right: -20px;
+    }
+
+    .dish-list {
+        padding: 11px 25px;
+    }
+
+    .dish-list__dish-name {
+        font-size: 25px;
+        font-weight: normal;
+    }
+
+    .dish-list__dish-price {
+        font-size: 20px;
+    }
+
+    .dish-list__dish-describtion {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 980px) {
+
+    .menu__heading {
+        font-size: 29px;
+        font-weight: normal;
+    }
+
+    .menu__text {
+        font-size: 17px;
+        margin: 10px 0 5px 20px;
+    }
+
+    .menu__title {
+        position: relative;
+    }
+
+    .menu__title::after {
+        content: url('/app/img/980px/Menu-logo.png');
+        position: absolute;
+        top: -18px;
+        right: 20px;
+    }
+
+    .menu__flex-container {
+        display: flex;
+    }
+
+    .menu__flex-item {
+        width: 50%;
+    }
+
+    .menu-section--light {
+        margin-top: 10px;
+    }
+
+    .menu-section {
+        padding: 10px 5px 10px 20px;
+        font-size: 26px;
+        margin-top: 19px;
+    }
+
+    .dish-list__title {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .dish-list__dish-container {
+        font-size: 15px;
+    }
+
+    .dish-list__dish-describtion {
+        font-size: 14px;
+    }
+
+    .dish-list__ico.pizza::before {
+        content: url('/app/img/640px/1pizza_640.png');
+    }
+
+    .dish-list__ico.drinks::before {
+        content: url('/app/img/640px/2drinks_640.png');
+    }
+
+    .dish-list__ico.tea::before {
+        content: url('/app/img/640px/3tea_640.png');
+    }
+
+    .dish-list__ico.beer::before {
+        content: url('/app/img/640px/4beer_640.png');
+    }
+
+    .dish-list__dish-name::before {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .menu__heading {
+        font-size: 40px;
+        font-weight: normal;
+        margin-left: 20px;
+    }
+
+    .menu__text {
+        font-size: 20px;
+        margin: 10px 0 0px 23px;
+    }
+
+    .menu__title {
+        position: relative;
+    }
+
+    .menu__title::after {
+        content: url('/app/img/980px/Menu-logo.png');
+        position: absolute;
+        top: -18px;
+        right: 20px;
+    }
+
+    .menu__flex-container {
+        display: flex;
+    }
+
+    .menu__flex-item {
+        width: 50%;
+    }
+
+    .menu-section {
+        padding: 13px 5px 13px 23px;
+        font-size: 37px;
+    }
+
+    .dish-list__title {
+        font-size: 27px;
+        margin: 20px 0;
+    }
+
+    .dish-list__dish-container {
+        font-size: 20px;
+    }
+
+    .dish-list__dish-price {
+        font-size: 28px;
+    }
+
+    .dish-list__dish-describtion {
+        font-size: 16px;
+    }
+
+    .dish-list__ico.pizza::before {
+        content: url('/app/img/640px/1pizza_640.png');
+    }
+
+    .dish-list__ico.drinks::before {
+        content: url('/app/img/640px/2drinks_640.png');
+    }
+
+    .dish-list__ico.tea::before {
+        content: url('/app/img/640px/3tea_640.png');
+    }
+
+    .dish-list__ico.beer::before {
+        content: url('/app/img/640px/4beer_640.png');
+    }
+
+    .dish-list__dish-name::before {
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+

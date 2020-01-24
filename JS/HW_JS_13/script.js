@@ -10,7 +10,7 @@ const body = document.querySelector(`body`);
 if (localStorage.getItem(`theme`)) {
     const themeClass = JSON.parse(localStorage.getItem(`theme`));
     // console.log(themeClass);
-    body.classList.add(themeClass);
+    body.classList.add(themeClass);-dddes
     
 }
 

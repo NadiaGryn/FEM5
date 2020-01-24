@@ -1,0 +1,40 @@
+.basic-page {
+    font-family: $font-family;
+        
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: 980px) {
+
+    .display-none {
+        display: none;
+    }
+
+    .display-block {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .display-none {
+        display: none;
+    }
+
+    .display-block {
+        display: block;
+    }
+}

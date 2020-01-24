@@ -1,0 +1,162 @@
+.navbar {
+    background-color: #373c3f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar__text {
+    color: $text-color;
+    font-family: $font-family-ad;
+    font-size: 13px;
+    margin-left: 17px;
+}
+
+.navbar__menu-ico {
+    color: $text-color;
+    background-color: #202529;
+    padding: 11px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header__content {
+    background-image: url('../img/320px/header-fon_320px.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 90px;
+    margin-bottom: 4px;
+}
+
+.header__content-text {
+    color: $text-color;
+    font-size: 16px;
+    padding: 18px 0 0px 23px;
+}
+
+.header__content-text2 {
+    color: $text-color;
+    font-size: 16px;
+    padding: 8px 0 8px 21px;
+}
+
+.header__content-email {
+    font-size: 15px;
+    color: #9dc9d2;
+    margin-left: 20px;
+}
+
+@media (min-width: 640px) {
+
+    .navbar__text {
+        font-size: 20px;
+        margin-left: 40px;
+    }
+
+    .navbar__menu-ico {
+        padding: 20px;
+        font-size: 23px;
+    }
+
+    .header__content {
+        background-image: url('../img/640px/header-fon_640px.png');
+        padding-bottom: 215px;
+        margin-bottom: 2px;
+    }
+
+    .header__content-text {
+        font-size: 30px;
+        padding: 20px 0 5px 40px;
+    }
+
+    .header__content-text2 {
+        font-size: 30px;
+        padding: 0 0 15px 40px;
+    }
+
+    .header__content-email {
+        font-size: 27px;
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 980px) {
+
+    .navbar__all-links {
+        margin-left: 40px;
+    }
+
+    .navbar__all-links>a {
+        color: #d3d4d4;
+        text-transform: uppercase;
+        margin-right: 25px;
+        cursor: pointer;
+    }
+
+    .pizza-logo {
+        width: 104px;
+        height: 83px;
+        margin: 8px 30px 6px 30px;
+    }
+
+    .header__content {
+        background-image: url('/app/img/980px/header-fon\ 980\ \(1\).png');
+        padding-bottom: 304px;
+    }
+
+    .header__content-text {
+        font-size: 45px;
+        padding: 60px 0 0px 40px;
+    }
+
+    .header__content-text2 {
+        font-size: 45px;
+        padding: 10px 0 30px 40px;
+    }
+
+    .header__content-email {
+        font-size: 35px;
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .navbar__all-links {
+        margin-left: 40px;
+    }
+
+    .navbar__all-links>a {
+        color: #d3d4d4;
+        text-transform: uppercase;
+        margin-right: 25px;
+        cursor: pointer;
+    }
+
+    .pizza-logo {
+        width: 104px;
+        height: 83px;
+        margin: 8px 30px 6px 30px;
+    }
+
+    .header__content {
+        background-image: url('/app/img/980px/header-fon\ 980\ \(1\).png');
+        padding-bottom: 423px;
+    }
+
+    .header__content-text {
+        font-size: 45px;
+        padding: 60px 0 0px 40px;
+    }
+
+    .header__content-text2 {
+        font-size: 45px;
+        padding: 10px 0 30px 40px;
+    }
+
+    .header__content-email {
+        font-size: 35px;
+        margin-left: 40px;
+    }
+}
