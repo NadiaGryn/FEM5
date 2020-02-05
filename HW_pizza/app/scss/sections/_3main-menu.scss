@@ -87,22 +87,22 @@
 }
 
 .dish-list__ico.pizza::before {
-    content: url('/app/img/320px/1pizza.png');
+    content: url('../img/320px/1pizza.png');
     margin-right: -10px;
 }
 
 .dish-list__ico.drinks::before {
-    content: url('/app/img/320px/2drinks.png');
+    content: url('../img/320px/2drinks.png');
     margin-right: -5px;
 }
 
 .dish-list__ico.tea::before {
-    content: url('/app/img/320px/3tea.png');
+    content: url('../img/320px/3tea.png');
     margin-right: -10px;
 }
 
 .dish-list__ico.beer::before {
-    content: url('/app/img/320px/4beer.png');
+    content: url('../img/320px/4beer.png');
     margin-right: -5px;
 }
 
@@ -190,7 +190,7 @@
     }
 
     .menu__title::after {
-        content: url('/app/img/980px/Menu-logo.png');
+        content: url('../img/980px/Menu-logo.png');
         position: absolute;
         top: -18px;
         right: 20px;
@@ -228,19 +228,19 @@
     }
 
     .dish-list__ico.pizza::before {
-        content: url('/app/img/640px/1pizza_640.png');
+        content: url('../img/640px/1pizza_640.png');
     }
 
     .dish-list__ico.drinks::before {
-        content: url('/app/img/640px/2drinks_640.png');
+        content: url('../img/640px/2drinks_640.png');
     }
 
     .dish-list__ico.tea::before {
-        content: url('/app/img/640px/3tea_640.png');
+        content: url('../img/640px/3tea_640.png');
     }
 
     .dish-list__ico.beer::before {
-        content: url('/app/img/640px/4beer_640.png');
+        content: url('../img/640px/4beer_640.png');
     }
 
     .dish-list__dish-name::before {
@@ -266,7 +266,7 @@
     }
 
     .menu__title::after {
-        content: url('/app/img/980px/Menu-logo.png');
+        content: url('../img/1200px/Menu-logo.png');
         position: absolute;
         top: -18px;
         right: 20px;
@@ -303,19 +303,19 @@
     }
 
     .dish-list__ico.pizza::before {
-        content: url('/app/img/640px/1pizza_640.png');
+        content: url('../img/640px/1pizza_640.png');
     }
 
     .dish-list__ico.drinks::before {
-        content: url('/app/img/640px/2drinks_640.png');
+        content: url('../img/640px/2drinks_640.png');
     }
 
     .dish-list__ico.tea::before {
-        content: url('/app/img/640px/3tea_640.png');
+        content: url('../img/640px/3tea_640.png');
     }
 
     .dish-list__ico.beer::before {
-        content: url('/app/img/640px/4beer_640.png');
+        content: url('../img/640px/4beer_640.png');
     }
 
     .dish-list__dish-name::before {

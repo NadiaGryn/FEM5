@@ -191,7 +191,7 @@ table {
   }
 
   .header__content {
-    background-image: url("../img/980px/header980.png");
+    background-image: url("../img/980px/header1200.png");
     padding-bottom: 423px;
   }
 
@@ -579,7 +579,7 @@ table {
   }
 
   .menu__title::after {
-    content: url("../img/980px/Menu-logo.png");
+    content: url("../img/1200px/Menu-logo.png");
     position: absolute;
     top: -18px;
     right: 20px;
@@ -759,4 +759,4 @@ a {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
