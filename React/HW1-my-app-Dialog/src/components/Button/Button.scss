@@ -1,0 +1,28 @@
+.btn {
+    padding: 10px 15px;
+    margin: 50px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .btn-red {
+    color: #ffffff;
+    border: 1px solid #e74c3c;
+   }
+  
+  .btn-red:hover {
+    color: #b3382c;
+    border: 1px solid #b3382c;
+    transition: 0.5s;
+  }
+  
+  .btn-green {
+    color: white;
+    border: 1px solid #32CD32;
+  }
+  
+  .btn-green:hover {    
+    color: #006400;
+    border: 1px solid #006400;
+    transition: 0.5s;
+   }

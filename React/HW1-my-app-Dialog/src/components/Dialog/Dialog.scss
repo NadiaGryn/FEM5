@@ -1,0 +1,97 @@
+.dialog {
+    width: 516px;
+    height: 252px;
+  }
+
+  .dialogShadow {
+      position: absolute;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+.dialogHeader { 
+   width: 516px;
+   height: 68px;   
+   font-size: 25px;
+   font-weight: bold;
+   position: relative;
+   color: #ffffff;
+  }
+
+  .dialogHeaderGreen {
+    background-color: #006400;
+   }
+
+  .dialogHeaderRed {
+   background-color: #d44637;   
+  }  
+
+  .dialogHeader>p {
+      text-align: left;
+      padding: 10px 25px;
+  }
+  
+.btn-close {
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    width: 30px;
+    height: 43px;
+    font-size: 31px;
+    position: absolute;
+    top: 3px;
+    right: 17px;
+}
+
+.btn-closeGreen {
+    background-color: #006400;
+}
+
+.btn-closeRed {    
+    background-color: #d44637;
+}
+
+.dialogBody {
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    padding: 30px 30px 45px;
+}
+
+.dialogBodyGreen {
+    background-color: #32CD32;
+}
+
+.dialogBodyRed {
+    background-color: #e74c3c;;
+}
+
+.dialogActionBtns {
+    margin-top: 30px;
+}
+
+.dialogBtn {
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 5px 15px;
+    padding: 10px;
+    width: 100px;
+    height: 41px;
+    border: none;
+    cursor: pointer;
+}
+
+.dialogBtnGreen {
+    background-color: #006400;
+
+}
+
+.dialogBtnRed {
+    background-color: #b3382c;
+}
