@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Advanced Javascript module</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .modal {
+            position: fixed;
+            margin-top: 2%;
+            z-index: 1;
+            width: 70%;
+            height: 70%;
+            overflow: auto;
+            background-color: rgba(156, 112, 112, 0.3);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .closeSpan {
+            color: #aaaaaa;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(146, 18, 18);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .closeSpan:hover,
+        .closeSpan:focus {
+            color: rgb(146, 18, 18);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        form {
+            width: 10%;
+            background-color: rgba(211, 197, 151, 0.89);
+        }
+
+        .userModal {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 45%;
+            background-color: rgb(148, 79, 79);
+            padding: 10px;
+            z-index: 100;
+        }
+
+        .userModal.active {
+            display: block;
+        }
+
+        .empty {
+            font-size: 24px;
+            color: rgba(156, 112, 112, 0.3);
+            z-index: 101;
+        }
+        /* .error {
+            width: 200px;
+            height: 100px;
+            background-color: rgba(235, 230, 213, 0.89);
+            color: rgba(143, 130, 90, 0.89);
+            font-size: 25px;
+            position: fixed;
+            top: 10%;
+            margin: 0 auto;
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>Logo</div>
+        <div id="header-button">
+            <button id="myBtn">New Patient</button>
+        </div>
+        <div class="modal"></div>
+    </header>
+    <!-- <form action="">
+        <input type="text" placeholder="name of doctor">
+        <input type="text" placeholder="doctor's specialty">
+        <input type="text" placeholder="purpose of the visit">
+        <input type="text" placeholder="normal pressure">
+        <input type="text" placeholder="body mass index">
+        <input type="text" placeholder="body mass index">
+        <input type="text" placeholder="past diseases of the cardiovascular system">
+        <div class="nativeDatePicker">
+            <label for="bday">Enter your birthday:</label>
+            <input type="date" id="bday" name="bday">
+            <span class="validity"></span>
+        </div>
+        <input type="text" placeholder="Enter your full name">
+    </form> -->
+    <script>
+        class User {
+            constructor(id) {
+                this._id = id;
+                this.element = null;
+            }
+            render() {
+                this.element = document.createElement("div");
+                this.element.id = this._id;
+                this.element.className = "userModal";
+
+                const closeSpan = document.createElement("span");
+                closeSpan.className = "closeSpan";
+                closeSpan.textContent = "X";
+                this.element.append(closeSpan);
+
+                closeSpan.addEventListener("click", () => {
+                    this.element.classList.remove("active");
+
+                });
+                return this.element;
+            }
+            open() {
+                this.element.classList.add("active");
+            }
+        }
+
+        class AutorizationUser extends User {
+            constructor(url, ...args) {
+                super(...args);
+                this._url = url;
+            }
+            render() {
+                const form = document.createElement("form");
+                form.action = this._url;
+
+                form.innerHTML = `<input type="text" name="email" placeholder="name or e-mail">
+                                   <input type="password" name="password" placeholder="password">
+                                    <input type="submit" value="autorizacition">`;
+                form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+
+                    const data = {};
+                    for (let item of e.target.getElementsByTagName('input')) {
+                        if (item.type !== 'submit') {
+                            data[item.name] = item.value;
+                        }
+                    }
+                    console.log(data);
+
+                    // console.dir(e.target[0].value);
+
+                    // const user = {
+                    //     email: e.target[0].value,
+                    //     password: e.target[1].value,
+                    // }
+                    // console.log(user);
+
+                    let response = await fetch('http://cards.danit.com.ua/login', {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json;charset=utf-8'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                    let result = await response.json();
+
+                    localStorage.setItem("token", result.token);
+
+                    console.log(result);
+
+                    if (result.status !== "Error") {
+                        modal.remove();
+                        myBtn.remove();
+
+                        const button = document.createElement("button");
+                        button.innerText = "Create new visit";
+                        button.addEventListener("click", async () => {
+                            let response = await fetch('http://cards.danit.com.ua/cards', {
+                                method: "GET",
+                                headers: {
+                                    'Content-Type': 'application/json;charset=utf-8',
+                                    'Authorization': `Bearer ${localStorage.getItem("token")}`
+                                },
+                            });
+                            let result = await response.json();
+
+                            console.log(result);
+
+                        //     if (result === null) {
+                        //     const div = document.createElement("div");
+                        //     div.innerText = "No items have been added";
+                        //     modal.append(div);
+                        // }
+
+                        });
+                        document.getElementById("header-button").append(button);
+                        
+                    } else {
+                        alert("Enter correct login or password");
+                        // const error = document.createElement("div");
+                        // error.className = "error";
+                        // error.innerText = "Enter correct login or password";
+                        // modal.append(error);
+                    }
+                    
+                })
+                const modal = super.render();
+                modal.append(form);
+                return modal;
+
+                // modal.append(empty);
+            }
+
+        }
+
+        const authModal = new AutorizationUser("/login", "myModal");
+        document.body.append(authModal.render());
+        const myBtn = document.querySelector("#myBtn");
+        myBtn.addEventListener("click", () => {
+            authModal.open();
+        });
+
+
+
+
+
+
+        // const btn = document.getElementById("myBtn");
+
+
+        // class ModalWindow {
+        //     constructor(...elements) {
+        //         this._elements = elements;
+        //     }
+        //     render(container, btn) {
+        //         const modalDiv = document.createElement("div");
+        //         this._elements.forEach(element => {
+        //             modalDiv.append(element.render());
+        //         })
+        //         this.open(btn);
+        //         this.close();
+        //     }
+        //     open(btn) {
+        //         btn.addEventListener("click", () => this.modalDiv.classList.add("active"));
+        //     }
+        //     close() {
+        //         this.modalDiv.querySelector('.close').addEventListener('click', () => this.modalDiv.classList.remove('active'));
+        //     }
+        // }
+
+        // class basicForm {
+        //     constructor(url, id, ...elements) {
+        //         this._url = url;
+        //         this.id = id;
+        //         this._elements = elements;
+        //         this.form = null;
+        //     }
+
+        //     render() {
+        //         const form = document.createElement("form");
+        //         form.id = this.id;
+        //         form.action = this._url;
+
+        //         this._elements.forEach(formElement => {
+        //             form.append(formElement.render())
+        //         })
+        //     }
+
+        //     dataCollection() {
+        //         const jsonObj = {};
+        //         const inputs = this.form.querySelectorAll("input");
+        //         inputs.forEach(input => {
+        //             jsonObj[input.name] = input.value;
+        //         });
+        //         return jsonObj;
+        //     }
+        // }
+
+        // class Input {
+        //     constructor(type, name, placeholder, value, ...className) {
+        //         this._type = type;
+        //         this._name = name;
+        //         this._placeholder = placeholder;
+        //         this._value = value;
+        //         this._className = className.join(" ");
+        //     }
+        //     render() {
+        //         const input = document.createElement("input");
+        //         input.className = this._className;
+        //         return input;
+        //     }
+        // }
+        // const user = new Input("text", "patientName", "Введите имя пациента", "form-control");
+        // const simpleForm = new basicForm(user);
+        // const modal = new ModalWindow(simpleForm);
+
+
+    </script>
+</body>
+
+</html>

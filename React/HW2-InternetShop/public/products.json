@@ -1,0 +1,88 @@
+
+ [
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 50,
+            "url": "Products_Img/1.png",
+            "articul": 101,
+            "colour": "black"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 60,
+            "url": "Products_Img/2.png",
+            "articul": 102,
+            "colour": "brown & black"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 65,
+            "url": "Products_Img/3.png",
+            "articul": 103,
+            "colour": "brown"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 55,
+            "url": "Products_Img/4.png",
+            "articul": 104,
+            "colour": "beige"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 70,
+            "url": "Products_Img/5.png",
+            "articul": 105,
+            "colour": "blue"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 87,
+            "url": "Products_Img/6.png",
+            "articul": 106,
+            "colour": "black"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 63,
+            "url": "Products_Img/7.png",
+            "articul": 107,
+            "colour": "black"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 72,
+            "url": "Products_Img/8.png",
+            "articul": 108,
+            "colour": "black"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 87,
+            "url": "Products_Img/9.png",
+            "articul": 109,
+            "colour": "red"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 115,
+            "url": "Products_Img/10.png",
+            "articul": 110,
+            "colour": "black"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 195,
+            "url": "Products_Img/11.png",
+            "articul": 111,
+            "colour": "black"
+        },
+        {
+            "name": "Aenean Ru Bristique",
+            "price": 210,
+            "url": "Products_Img/12.png",
+            "articul": 112,
+            "colour": "orange"
+        }
+    ]
+

@@ -1,0 +1,25 @@
+
+[
+    {
+      "id": 1,
+      "name": "",
+      "price": "",
+      "url": "",
+      "articul": 123
+      
+    },
+
+    {
+      "id": 2,
+      "name": "Email 1",
+      "price": "Email 2 price",
+      "url": ""
+    },
+
+    {
+      "id": 3,
+      "name": "Email 3",
+      "price": "Email 3 price",
+      "url": ""
+    }
+  ]

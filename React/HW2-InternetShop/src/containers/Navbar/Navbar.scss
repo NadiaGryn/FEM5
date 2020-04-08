@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+    border-top: 4px solid #c2c2c2;
+    background-color: #434343;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.navbar__item {
+    display: flex;
+    flex-direction: row;
+    margin: 0 150px;
+}
+
+.navbar__link {
+    color: white;
+    padding: 5px;
+    margin: 5px 20px;
+    cursor: pointer;
+}
+
+.navbar__link-login::before {
+    content: "\f007";
+    font-family: FontAwesome;
+    font-size: 11px;
+    margin-right: 4px;
+}
+
+.navbar__link-register::before {
+    content: "\f023";
+    font-family: FontAwesome;
+    font-size: 11px;
+    margin-right: 4px;
+}

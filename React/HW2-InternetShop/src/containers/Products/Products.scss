@@ -1,0 +1,16 @@
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-left: 58px;
+}
+
+.products-container-name {
+    color: #2A2A2A;
+    font-size: 22px;
+    margin: 50px 44px 20px 56px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #2A2A2A;
+}
+

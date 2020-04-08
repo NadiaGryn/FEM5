@@ -1,0 +1,37 @@
+.sofa-img {
+    width: 85%;
+    margin-left: 100px;
+    position: relative;
+}
+
+.slider-transparent-layer {
+    position: absolute;
+    left: 100px;
+    top: 635px;
+    width: 70%;
+    padding: 25px 98px 41px 105px;
+    background-color: rgba(49, 49, 49, 0.5);
+    background-blend-mode: lighten;  
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+.transparent-layer-tittle {
+    font-size: 47px;
+    margin-bottom: -30px;
+}
+
+.transparent-layer-text {
+    font-size:24px;
+}
+
+.transparent-layer-btn {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}

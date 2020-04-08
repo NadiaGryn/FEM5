@@ -1,0 +1,53 @@
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 25px;
+    background-color: #363636;
+}
+
+.header-phone {
+    color: white;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.phone-icon {
+    color:#d58e32;
+    margin-right: 5px;
+}
+
+.header-logo {
+    cursor: pointer;
+}
+
+.header-cart {
+    background-color:#d58e32;
+    width: 51px;
+    height: 49px;
+    border-radius: 5px;
+    margin-top: 22px;
+    cursor: pointer;
+    position: relative;
+}
+
+.fa-shopping-basket {
+    color: white;
+    font-size: 20px;
+    margin-left: 14px;
+    margin-top: 14px;
+}
+
+.header-cart-purchase-number {
+    background-color: #363636;
+    color: white;
+    width: 25px;
+    height: 26px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 50%;
+    position: absolute;
+    right: -17px;
+    top: 14px;
+    padding-top: 4px;
+}

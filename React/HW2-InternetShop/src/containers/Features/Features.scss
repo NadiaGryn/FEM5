@@ -1,0 +1,70 @@
+.features-flex {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 35px;
+}
+
+.features-card {
+    position: relative;
+    border: 2px solid #c7c7c7;
+    text-transform: uppercase;
+    text-align: center;
+    width: 263px;
+    height: 121px;
+}
+
+.features-ico {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #c7c7c7;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.ico-second-border {
+    position: absolute;
+    top: -25px;
+    left: 111px;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border: 1px solid #c3c3c3;
+    border-radius: 50%;
+}
+
+.fa-truck, .fa-headphones, .fa-reply-all, .fa-bullhorn {
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+.features-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #2a2a2a;
+    margin-bottom: -14px;
+    margin-top: 40px;
+}
+
+.features-text {
+    font-size: 15px;
+    color: #2a2a2a;
+}
+
+.features-card:hover .features-title,
+.features-card:hover .features-text {
+    color: #e0a38e;
+    transition: 0.5s;
+}
+
+.features-card:hover .features-ico {
+    color: white;
+    background-color: #d58e32;
+}
+
+.features-card:hover .ico-second-border {
+
+    border: 1px solid #d58e32;
+}
